@@ -13,8 +13,11 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
+        $nom = "max";
+
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'myName' => $nom
         ]);
     }
 }
