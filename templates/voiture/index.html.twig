@@ -11,10 +11,15 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/duboism/Desktop/symphonyDocs/garage/src/Controller/VoitureController.php'|file_link(0) }}">src/Controller/VoitureController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/duboism/Desktop/symphonyDocs/garage/templates/voiture/index.html.twig'|file_link(0) }}">templates/voiture/index.html.twig</a></code></li>
-    </ul>
+   <h2>Test</h2>
+        <ul>
+           {% for voiture in voitures %}
+                <h1>{{voiture.marque}},{{voiture.modele}}</h1>
+                <li>{{voiture.id}}</li>
+                <img src="{{voiture.cover}}" alt="cover image">
+
+
+           {% endfor %}
+        </ul>
 </div>
 {% endblock %}

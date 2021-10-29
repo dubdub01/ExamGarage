@@ -20,7 +20,7 @@ class Voiture
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity=image::class, mappedBy="voiture", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="voiture", orphanRemoval=true)
      */
     private $images;
 
@@ -100,14 +100,14 @@ class Voiture
     }
 
     /**
-     * @return Collection|image[]
+     * @return Collection|Image[]
      */
     public function getImages(): Collection
     {
         return $this->images;
     }
 
-    public function addImage(image $image): self
+    public function addImage(Image $image): self
     {
         if (!$this->images->contains($image)) {
             $this->images[] = $image;
@@ -117,7 +117,7 @@ class Voiture
         return $this;
     }
 
-    public function removeImage(image $image): self
+    public function removeImage(Image $image): self
     {
         if ($this->images->removeElement($image)) {
             // set the owning side to null (unless already changed)
