@@ -14,10 +14,12 @@
    <h2>Test</h2>
         <ul>
            {% for voiture in voitures %}
-                <h1>{{voiture.marque}},{{voiture.modele}}</h1>
-                <li>{{voiture.id}}</li>
-                <img src="{{voiture.cover}}" alt="cover image">
 
+            <a href="#" class="card mb-3">
+                <h1 class="card-title">{{voiture.marque}}</h1>
+                <h2 class="card-subtitle text-muted ">{{voiture.modele}}</h2>
+                <img src="{{voiture.cover}}" alt="cover image">
+            </a>
 
            {% endfor %}
         </ul>
