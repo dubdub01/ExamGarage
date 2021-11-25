@@ -4,24 +4,30 @@
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper { margin: 1em auto; max-width: 1200px; width: 95%; font: 18px/1.5; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-   <h2>Test</h2>
-        <ul>
+   <h2>Voitures en vente</h2>
+       <div class="row">
+       
+       
+       
            {% for voiture in voitures %}
+                <div class="col-4">
+                
+                    
+                <a href="#" class="card mb-4">
+                    <h1 class="card-title">{{voiture.marque}}</h1>
+                    <h2 class="card-subtitle text-muted ">{{voiture.modele}}</h2>
+                    <h2 class="card-subtitle text-muted ">{{voiture.prix}}€</h2>
 
-            <a href="#" class="card mb-3">
-                <h1 class="card-title">{{voiture.marque}}</h1>
-                <h2 class="card-subtitle text-muted ">{{voiture.modele}}</h2>
-                <img src="{{voiture.cover}}" alt="cover image">
-            </a>
-
+                    <img src="{{voiture.cover}}" alt="cover image">
+                </a>
+                </div> 
            {% endfor %}
-        </ul>
+        </div>
 </div>
 {% endblock %}
