@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce: {{voiture.marque}} {% endblock %}
+
+{% block body %}
+    <div class="annonce-title" style="background-image: url({{voiture.cover}});">
+        <div class="container">
+            <h1>{{voiture.marque}}</h1>
+            <h2>{{voiture.modele}}</h2>
+        </div>
+    </div>
+    
+    <div class="description">
+        <p>Cylindrée : {{voiture.cylindree}} </p>
+        <p>Puissance en CV : {{voiture.puissance}} </p>
+        <p>Carburant : {{voiture.carburant}} </p>
+        <p>Année : {{voiture.annee}} </p>
+        <p>Transmission : {{voiture.transmission}} </p>
+        <p>Kilometrage : {{voiture.km}} </p>
+        <p>Description : {{voiture.description}} </p>
+        <p>Options : {{voiture.options}} </p>
+    </div>
+
+
+
+{% endblock %}
