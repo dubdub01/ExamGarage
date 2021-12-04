@@ -1,0 +1,10 @@
+.annonce-title{
+    background-size: cover;
+    background-position: center center;
+    min-height: 1600px;
+}
+
+.container, h1, h2{
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
