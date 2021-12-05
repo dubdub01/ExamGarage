@@ -3,6 +3,7 @@
 {% block title %}Annonce: {{voiture.marque}} {% endblock %}
 
 {% block body %}
+
     <div class="annonce-title" style="background-image: url({{voiture.cover}});">
         <div class="container">
             <h1>{{voiture.marque}}</h1>
@@ -115,6 +116,18 @@
             </div>
         </div>
     </div>
+
+
+        {% for image in voiture.images %}
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{loop.index0}}" 
+                            {% if loop.first %} 
+                                class="active" aria-current="true" 
+                            {% endif %} aria-label="Slide {{loop.index}}"></button>
+        {% endfor %} 
     
+
+
+
+
 
 {% endblock %}

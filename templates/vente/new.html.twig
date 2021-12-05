@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création d'une vente{% endblock %}
+{% form_theme form 'vente/_collection.html.twig' %}
+{% block body %}
+    <div class="container">
+        <h1>Création d'une nouvelle vente</h1>
+
+        {{ form_start(form) }}
+
+               {# 
+                 <div class="container">
+                    <div>
+                
+                        {{form_row(form.title)}}
+                
+                    </div>
+                </div>
+              #}
+
+            {{form_widget(form)}}
+
+
+            <button type="submit" class="btn btn-primary mt-3">Création d'une vente</button>
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src='/js/vente.js' >
+        
+    </script>
+
+{% endblock %}
